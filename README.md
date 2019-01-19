@@ -1,7 +1,6 @@
 # Quadcopter-Simulation
 Code for controllers (PD, LQR) for flying quad-copter on various trajectories generated with way-points and dynamic constraints on MATLAB
 
-![architecture](/images/1.png)
 
 ![architecture](/images/2.png)
 
