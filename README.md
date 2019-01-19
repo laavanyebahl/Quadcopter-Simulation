@@ -51,6 +51,7 @@ scenario where the robot transitions between multiple waypoints along the x-axis
 increment by 10 cm in the x direction. Plot the error between the desired pose (position and orientation) and the
 actual pose. Modify the gains associated with the position control (outer loop) and attitude control (inner loop). Plot the response for multiple gains.
 
+![arch](/media/arch.png)
 ![p2](/media/2.png)
 ![2](/media/t2.gif)
 
