@@ -158,10 +158,10 @@ acceleration). Propose, implement, and evaluate two strategies to address and mi
 by saturation or gain selection. Possible strategies may include bounding changes in the input reference via a
 saturation function or choosing softer gains.
 
-Original :
+Original :   
 ![p10_1](/media/10_1.png)
 
-Tuned Gains:
+Tuned Gains:    
 ![p10_2](/media/10_2.png)
 
 ![10](/media/t10.gif)
