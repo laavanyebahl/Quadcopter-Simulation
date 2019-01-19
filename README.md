@@ -16,7 +16,7 @@ constraints;
 to fast, straight and curved paths)
 
 
-![architecture](/images/2.png)
+![architecture](/media/arch.png)
 
 **Orange** – Initial conditions  
 **Blue** – Feedback/ updation
@@ -40,25 +40,27 @@ rollpitchdes_eq.m, rollpitchdes_d_eq.m, rollpitchdes_dd_eq.m, attitude_controlle
 plot_graphs.m, plot_graphs_velocities.m, simulate_quadcopter.m
 
 
-# TASKS:  
+# Tasks:  
 They are given in the tasks folder and can be run individually:
 
 
-**2.Hover Performance:**    
+**2. Hover Performance:**    
 Using the linearized feedback control policy, implement a PD
 feedback controller to enable the robot to hover at a desired location (e.g., z = 0.5 m). Create a simulation
 scenario where the robot transitions between multiple waypoints along the x-axis by specifying goals that
 increment by 10 cm in the x direction. Plot the error between the desired pose (position and orientation) and the
 actual pose. Modify the gains associated with the position control (outer loop) and attitude control (inner loop). Plot the response for multiple gains.
 
-![2](/images/t2.gif)
+![p2](/media/2.png)
+![2](/media/t2.gif)
 
 **3. Line-tracking Performance:**      
 Develop a PD line tracking controller to enable the robot to take-off from a
 starting location, go to a fixed height of 1.0 m, and return to the ground. Plot the error between the desired pose (position and orientation) and the actual pose. Modify the gains associated with the position control (outer loop). Plot the
 response for multiple gains.
 
-![3](/images/t3.gif)
+![p3](/media/3.png)
+![3](/media/t3.gif)
 
 
 **4. State Machine:**     
@@ -77,7 +79,9 @@ tracking mode.
 * After remaining in hover mode for a brief period of time, the robot transitions into land mode and
 begins a descent to the ground.
 
-![4](/images/t4.gif)
+![state](/media/state.png)
+![p4](/media/4.png)
+![4](/media/t4.gif)
 
 **5. Gain Selection and Tuning:**     
 After commanding the robot to takeoff and hover, generate a command that
@@ -88,15 +92,17 @@ overshoot. Now provide a waypoint at the same position but with heading of 15 de
 domain performance characteristics of the heading controller. Analyze different values (position and heading)
 with given different gain values.
 
-![5](/images/t5.gif)
+![p5](/media/5.png)
+![5](/media/t5.gif)
 
 **6. LQR Controller Design and Evaluation:**    
 Repeat the evaluation in (2), (3), and (5) using an LQR-based
 feedback controller. Observe the performance difference in terms of error response characteristics.
 
-![6_2](/images/t6_2.gif)
-![6_3](/images/t6_3.gif)
-![6_5](/images/t6_5.gif)
+![6_2](/media/t6_2.gif)
+![p6](/media/6_2.png)
+![6_3](/media/t6_3.gif)
+![6_5](/media/t6_5.gif)
 
 **7. Bounded Acceleration Trajectory Generation:**     
 Develop a straight line time-parameterized polynomial
@@ -107,7 +113,9 @@ control) including the error in the pose and linear/angular velocities. As you i
 improve by artificially increasing the motor gain configuration parameter thereby effectively upgrading the
 robot motors.
 
-![7](/images/t7.gif)
+![p7_1](/media/7_1.png)
+![p7_2](/media/7_2.png)
+![7](/media/t7.gif)
 
 **8. Minimum Energy Elliptical Trajectory:**   
 Define a piecewise continuous trajectory consisting of four
@@ -121,14 +129,23 @@ trajectory, formulate the problem as a Quadratic Project (QP) and solve for the 
 coefficients. Generate error plots that depict the tracking performance (using PD control). Generate a cumulative
 error distribution plot. Observe how does the tracking performance change given differing velocity profiles.
 
-![8_1](/images/t8_1.gif)
+![p8_1](/media/8_1.png)
+
+Tangential velocity = 1 m/s
+![p8_2](/media/8_2.png)
+
+Tangential velocity = 1.5 m/s
+![p8_3](/media/8_3.png)
+
+![8_1](/media/t8_1.gif)
 
 **9. Robot Pirouette:**   
 Repeat the same steps as specified in (7) but now with heading commands that cause the
 robot to point to the center of the ellipse (second trajectory phase). Observe how does the performance change when
 introducing time-varying heading commands at high-speeds.
 
-![9](/images/t9.gif)
+![p9](/media/9.png)
+![9](/media/t9.gif)
 
 **10. Enforcing Smooth State Machine Transitions :**    
 The naive state machine proposed in (4) does not enforce the
@@ -139,5 +156,11 @@ acceleration). Propose, implement, and evaluate two strategies to address and mi
 by saturation or gain selection. Possible strategies may include bounding changes in the input reference via a
 saturation function or choosing softer gains.
 
-![10](/images/t10.gif)
+Original :
+![p10_1](/media/10_1.png)
+
+Tuned Gains:
+![p10_2](/media/10_2.png)
+
+![10](/media/t10.gif)
 
