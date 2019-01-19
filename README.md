@@ -5,9 +5,9 @@ Code for controllers (PID, LQR) for flying quad-copter on various trajectories g
 
 ![architecture](/images/2.png)
 
-Orange – Initial conditions
+**Orange** – Initial conditions
 
-Blue – Feedback/ updation
+**Blue** – Feedback/ updation
 
 We first initialize are trajectorydes and trajectoryact for t=0
 We run the loop in small time steps and keep updating the linear and angular positions, velocities, accelerations.
