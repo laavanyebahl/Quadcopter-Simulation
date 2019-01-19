@@ -51,10 +51,15 @@ scenario where the robot transitions between multiple waypoints along the x-axis
 increment by 10 cm in the x direction. Plot the error between the desired pose (position and orientation) and the
 actual pose. Modify the gains associated with the position control (outer loop) and attitude control (inner loop). Plot the response for multiple gains.
 
+![2](/images/t2.gif)
+
 **3. Line-tracking Performance:**      
 Develop a PD line tracking controller to enable the robot to take-off from a
 starting location, go to a fixed height of 1.0 m, and return to the ground. Plot the error between the desired pose (position and orientation) and the actual pose. Modify the gains associated with the position control (outer loop). Plot the
 response for multiple gains.
+
+![3](/images/t3.gif)
+
 
 **4. State Machine:**     
 Develop and detail a state machine that enables the platform to takeoff to a pre-specified
@@ -72,6 +77,8 @@ tracking mode.
 * After remaining in hover mode for a brief period of time, the robot transitions into land mode and
 begins a descent to the ground.
 
+![4](/images/t4.gif)
+
 **5. Gain Selection and Tuning:**     
 After commanding the robot to takeoff and hover, generate a command that
 tracks a single waypoint at [0, 0, 0.1] m (zero velocity). Plot the error response of the system with respect to the
@@ -81,9 +88,15 @@ overshoot. Now provide a waypoint at the same position but with heading of 15 de
 domain performance characteristics of the heading controller. Analyze different values (position and heading)
 with given different gain values.
 
+![5](/images/t5.gif)
+
 **6. LQR Controller Design and Evaluation:**    
 Repeat the evaluation in (2), (3), and (5) using an LQR-based
 feedback controller. Observe the performance difference in terms of error response characteristics.
+
+![6_2](/images/t6_2.gif)
+![6_3](/images/t6_3.gif)
+![6_5](/images/t6_5.gif)
 
 **7. Bounded Acceleration Trajectory Generation:**     
 Develop a straight line time-parameterized polynomial
@@ -93,6 +106,8 @@ Generate a set of error plots that depict the performance of the platform when t
 control) including the error in the pose and linear/angular velocities. As you increase the desired acceleration bound, at what value does the system begin to exhibit degraded tracking accuracy? Observe how does the performance
 improve by artificially increasing the motor gain configuration parameter thereby effectively upgrading the
 robot motors.
+
+![7](/images/t7.gif)
 
 **8. Minimum Energy Elliptical Trajectory:**   
 Define a piecewise continuous trajectory consisting of four
@@ -106,10 +121,14 @@ trajectory, formulate the problem as a Quadratic Project (QP) and solve for the 
 coefficients. Generate error plots that depict the tracking performance (using PD control). Generate a cumulative
 error distribution plot. Observe how does the tracking performance change given differing velocity profiles.
 
+![8_1](/images/t8_1.gif)
+
 **9. Robot Pirouette:**   
 Repeat the same steps as specified in (7) but now with heading commands that cause the
 robot to point to the center of the ellipse (second trajectory phase). Observe how does the performance change when
 introducing time-varying heading commands at high-speeds.
+
+![9](/images/t9.gif)
 
 **10. Enforcing Smooth State Machine Transitions :**    
 The naive state machine proposed in (4) does not enforce the
@@ -119,4 +138,6 @@ mode based on an error term that only considers the desired and current pose (ig
 acceleration). Propose, implement, and evaluate two strategies to address and mitigate rapid changes in modes
 by saturation or gain selection. Possible strategies may include bounding changes in the input reference via a
 saturation function or choosing softer gains.
+
+![10](/images/t10.gif)
 
