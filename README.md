@@ -44,7 +44,7 @@ plot_graphs.m, plot_graphs_velocities.m, simulate_quadcopter.m
 They are given in the tasks folder and can be run individually:
 
 
-**2.Hover Performance:**    
+**2. Hover Performance:**    
 Using the linearized feedback control policy, implement a PD
 feedback controller to enable the robot to hover at a desired location (e.g., z = 0.5 m). Create a simulation
 scenario where the robot transitions between multiple waypoints along the x-axis by specifying goals that
