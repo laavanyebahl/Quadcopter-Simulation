@@ -2,6 +2,7 @@
 Code for controllers (PID, LQR) for flying quad-copter on various trajectories generated with way-points and dynamic constraints on MATLAB
 
 Orange – Initial conditions
+
 Blue – Feedback/ updation
 
 We first initialize are trajectorydes and trajectoryact for t=0
