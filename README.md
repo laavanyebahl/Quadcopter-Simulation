@@ -79,7 +79,7 @@ desired position, orientation, and linear and angular velocities. Measure the ri
 associated with the position and linear velocities, the steady-state value, the maximum percent
 overshoot. Now provide a waypoint at the same position but with heading of 15 deg and loof for the similar time
 domain performance characteristics of the heading controller. Analyze different values (position and heading)
-with given different gain values?
+with given different gain values.
 
 **6. LQR Controller Design and Evaluation:**    
 Repeat the evaluation in (2), (3), and (5) using an LQR-based
