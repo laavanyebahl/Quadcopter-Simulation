@@ -44,15 +44,14 @@ plot_graphs.m, plot_graphs_velocities.m, simulate_quadcopter.m
 They are given in the tasks folder and can be run individually:
 
 
-**2.Hover Performance:**  
+**2.Hover Performance:**    
 Using the linearized feedback control policy, implement a PD
 feedback controller to enable the robot to hover at a desired location (e.g., z = 0.5 m). Create a simulation
 scenario where the robot transitions between multiple waypoints along the x-axis by specifying goals that
 increment by 10 cm in the x direction. Plot the error between the desired pose (position and orientation) and the
 actual pose. Modify the gains associated with the position control (outer loop) and attitude control (inner loop). Plot the response for multiple gains.
 
-**3. Line-tracking Performance:**   
-
+**3. Line-tracking Performance:**      
 Develop a PD line tracking controller to enable the robot to take-off from a
 starting location, go to a fixed height of 1.0 m, and return to the ground. Plot the error between the desired pose (position and orientation) and the actual pose. Modify the gains associated with the position control (outer loop). Plot the
 response for multiple gains.
@@ -74,8 +73,7 @@ tracking mode.
 * After remaining in hover mode for a brief period of time, the robot transitions into land mode and
 begins a descent to the ground.
 
-**5. Gain Selection and Tuning:**  
-
+**5. Gain Selection and Tuning:**     
 After commanding the robot to takeoff and hover, generate a command that
 tracks a single waypoint at [0, 0, 0.1] m (zero velocity). Plot the error response of the system with respect to the
 desired position, orientation, and linear and angular velocities. Measure the rise (90%) and settling (10%) times
@@ -84,11 +82,11 @@ overshoot. Now provide a waypoint at the same position but with heading of 15 de
 domain performance characteristics of the heading controller. Analyze different values (position and heading)
 with given different gain values?
 
-**6. LQR Controller Design and Evaluation:**  
+**6. LQR Controller Design and Evaluation:**    
 Repeat the evaluation in (2), (3), and (5) using an LQR-based
 feedback controller. Observe the performance difference in terms of error response characteristics.
 
-**7. Bounded Acceleration Trajectory Generation:**  
+**7. Bounded Acceleration Trajectory Generation:**     
 Develop a straight line time-parameterized polynomial
 trajectory with initial and final endpoint constraints ([0, 0, 1] and [0, 0, 10], respectively; higher-order terms
 zero). Choose a time-scaling that ensures a bounded (maximum/minimum) acceleration less than 3 m/s2.
@@ -97,8 +95,7 @@ control) including the error in the pose and linear/angular velocities. As you i
 improve by artificially increasing the motor gain configuration parameter thereby effectively upgrading the
 robot motors.
 
-**8. Minimum Energy Elliptical Trajectory:**
-
+**8. Minimum Energy Elliptical Trajectory:**   
 Define a piecewise continuous trajectory consisting of four
 waypoints: [0, 0, 1, 0], [2, 1, 1, 0], [0, 2, 1, 0], [-2, 1, 1, 0] (position, heading). To do so, generate an optimal
 (minimum energy) trajectory that visits the four waypoints (returning to the first; forming an ellipse) with an
@@ -110,14 +107,12 @@ trajectory, formulate the problem as a Quadratic Project (QP) and solve for the 
 coefficients. Generate error plots that depict the tracking performance (using PD control). Generate a cumulative
 error distribution plot. Observe how does the tracking performance change given differing velocity profiles.
 
-**9. Robot Pirouette:**
-
+**9. Robot Pirouette:**   
 Repeat the same steps as specified in (7) but now with heading commands that cause the
 robot to point to the center of the ellipse (second trajectory phase). Observe how does the performance change when
 introducing time-varying heading commands at high-speeds.
 
-**10. Enforcing Smooth State Machine Transitions :**
-
+**10. Enforcing Smooth State Machine Transitions :**    
 The naive state machine proposed in (4) does not enforce the
 requirement that feedback control references can exhibit non-smooth (and non-trivial) jumps in the desired pose,
 velocities, and higher-order terms. As an example, consider the transition from the trajectory mode to the hover
