@@ -51,7 +51,6 @@ scenario where the robot transitions between multiple waypoints along the x-axis
 increment by 10 cm in the x direction. Plot the error between the desired pose (position and orientation) and the
 actual pose. Modify the gains associated with the position control (outer loop) and attitude control (inner loop). Plot the response for multiple gains.
 
-![arch](/media/arch.png)
 ![p2](/media/2.png)
 ![2](/media/t2.gif)
 
@@ -99,6 +98,8 @@ with given different gain values.
 **6. LQR Controller Design and Evaluation:**    
 Repeat the evaluation in (2), (3), and (5) using an LQR-based
 feedback controller. Observe the performance difference in terms of error response characteristics.
+
+![lqr](/media/lqr.png)
 
 ![6_2](/media/t6_2.gif)
 ![p6](/media/6_2.png)
