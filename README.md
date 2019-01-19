@@ -9,7 +9,7 @@ Code for controllers (PID, LQR) for flying quad-copter on various trajectories g
 
 **Blue** – Feedback/ updation
 
-We first initialize are trajectorydes and trajectoryact for t=0
+We first initialize are trajectorydes and trajectoryact for t=0.  
 We run the loop in small time steps and keep updating the linear and angular positions, velocities, accelerations.
 
 **Format of both trajectorydes and trajectoryact:**
