@@ -40,7 +40,7 @@ rollpitchdes_eq.m, rollpitchdes_d_eq.m, rollpitchdes_dd_eq.m, attitude_controlle
 plot_graphs.m, plot_graphs_velocities.m, simulate_quadcopter.m
 
 
-# TASKS:  
+# Tasks:  
 They are given in the tasks folder and can be run individually:
 
 
