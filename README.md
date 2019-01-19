@@ -56,8 +56,7 @@ Develop a PD line tracking controller to enable the robot to take-off from a
 starting location, go to a fixed height of 1.0 m, and return to the ground. Plot the error between the desired pose (position and orientation) and the actual pose. Modify the gains associated with the position control (outer loop). Plot the
 response for multiple gains.
 
-**4. State Machine:**  
-
+**4. State Machine:**     
 Develop and detail a state machine that enables the platform to takeoff to a pre-specified
 height, hover, track trajectories, and land. Provide a description of this state machine with an associated state
 machine diagram. One possible strategy is to develop a finite sequence of modes that transition based on the
